@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<ul class="post-list">
+  {%- for post in site.posts -%}
+  <li class="post-list-item">
+    <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %-d, %Y' }}</time>
+    <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    {%- if post.excerpt -%}
+    <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>
+    {%- endif -%}
+  </li>
+  {%- endfor -%}
+</ul>

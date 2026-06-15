@@ -1,0 +1,24 @@
+title: Goo Grotto Dev Log
+description: >-
+  Notes, thoughts, and news from the solo dev of Goo Grotto. 
+url: "https://web.goo-grotto.com"
+baseurl: ""
+
+author:
+  name: gen
+
+# Build settings
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md
+  - .github
