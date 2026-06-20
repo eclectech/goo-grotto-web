@@ -1,11 +1,15 @@
 title: Goo Grotto Dev Log
 description: >-
-  Notes, thoughts, and news from the solo dev of Goo Grotto. 
+  notes and news from planet goopiter
 url: "https://web.goo-grotto.com"
 baseurl: ""
 
+signup_url: "https://goo-grotto.com"
+
 author:
   name: gen
+  bluesky: https://bsky.app/profile/eclectech.bsky.social
+  tumblr: https://www.tumblr.com/goo-grotto
 
 # Build settings
 markdown: kramdown

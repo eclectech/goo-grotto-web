@@ -12,3 +12,19 @@ layout: default
     {{ content }}
   </div>
 </article>
+
+<nav class="post-nav">
+  <div class="post-nav__prev">
+    {%- if page.previous -%}
+    <span class="post-nav__label">older</span>
+    <a class="post-nav__link" href="{{ page.previous.url | relative_url }}">{{ page.previous.title }}</a>
+    {%- endif -%}
+  </div>
+  <a class="post-nav__home" href="{{ '/' | relative_url }}">all posts</a>
+  <div class="post-nav__next">
+    {%- if page.next -%}
+    <span class="post-nav__label">newer</span>
+    <a class="post-nav__link" href="{{ page.next.url | relative_url }}">{{ page.next.title }}</a>
+    {%- endif -%}
+  </div>
+</nav>

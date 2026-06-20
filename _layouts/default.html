@@ -3,19 +3,38 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" href="{{ '/assets/fonts/fredoka.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/assets/fonts/nunito.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   {%- feed_meta -%}
   {%- seo -%}
 </head>
 <body>
-  <header class="site-header">
-    <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-  </header>
-  <main class="site-content">
-    {{ content }}
-  </main>
-  <footer class="site-footer">
-    <p>© {{ site.time | date: '%Y' }} {{ site.author.name }} · <a href="{{ '/feed.xml' | relative_url }}">RSS</a></p>
-  </footer>
+  <div class="ground-texture" aria-hidden="true"></div>
+  <div class="slime-scatter" aria-hidden="true">
+    <img class="slime s-puddle"   src="{{ '/assets/slimes/red-puddle.svg'    | relative_url }}" alt="">
+    <img class="slime s-squircle" src="{{ '/assets/slimes/green-squircle.svg' | relative_url }}" alt="">
+    <img class="slime s-splat"    src="{{ '/assets/slimes/blue-splat.svg'     | relative_url }}" alt="">
+    <img class="slime s-balloon"  src="{{ '/assets/slimes/blue-balloon.svg'   | relative_url }}" alt="">
+    <img class="slime s-star"     src="{{ '/assets/slimes/purple-star.svg'    | relative_url }}" alt="">
+    <img class="slime s-spike"    src="{{ '/assets/slimes/amber-spike.svg'    | relative_url }}" alt="">
+  </div>
+  <div class="page">
+    <header class="site-header">
+      <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      {%- if site.description -%}
+      <p class="site-tagline">{{ site.description | strip_newlines }}</p>
+      {%- endif -%}
+    </header>
+    {%- if site.signup_url -%}
+    <a class="signup-cta__button" href="{{ site.signup_url }}">Sign up to get notified when Goo Grotto opens!</a>
+    {%- endif -%}
+    <main class="site-content">
+      {{ content }}
+    </main>
+    <footer class="site-footer">
+      <p>© {{ site.time | date: '%Y' }} {{ site.author.name }} · <a href="{{ '/about' | relative_url }}">about</a>{% if site.author.bluesky %} · <a href="{{ site.author.bluesky }}" rel="me">BlueSky</a>{% endif %}{% if site.author.tumblr %} · <a href="{{ site.author.tumblr }}" rel="me">Tumblr</a>{% endif %} · <a href="{{ '/feed.xml' | relative_url }}">RSS</a></p>
+    </footer>
+  </div>
 </body>
 </html>
