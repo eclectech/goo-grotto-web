@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "weekly progress log"
-date: 2026-06-22 16:00:00 +0000
+date: 2026-06-22 14:00:00 +0000
 ---
 
 I think I want to try and make a habit of posting a progress log every Monday to keep me motivated and organized. The days can blend together out here, so it's nice to have a rhythm to return to. 
