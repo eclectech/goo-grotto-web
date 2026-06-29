@@ -1,0 +1,43 @@
+---
+layout: post
+title: "starting the goo grotto dev log"
+date: 2026-06-29 00:00:00 +0000
+---
+
+Here's my progress log for this week!
+
+# racing
+
+This is the big one! I made a huge amount of progress. It was one of those things where I knew what the architecture was going to look like in my head from the very start, and I just kind of had to knock it out.
+
+- Built the race back-end physics sim with:
+  - agentic slime behaviour based around their stats and personality (oh yeah slimes have personalities now)
+  - slime-on-slime violence
+  - slipstream and drafting mechanics
+- Also built the race replay front-end with:
+  - visual effects for their progress through the race in the form of goo trails
+  - visual effects for collisions
+- a fun little countdown
+
+# slime traits
+
+I did some foundation work on slimes themselves too:
+
+- Gave slimes some stats that are on sliding scales, not just "number go up", to make them differentiate from each other even at max level
+- Gave slimes a personality as well
+- Extracted existing genetic traits that seemed to fit into this new sliding scale system to keep things nice and consistent
+- Started adding a "biography composer" and "notability" system that should hopefully make any text written about slimes automatically look fun and variable, instead of just being a list of stats. (No LLM usage, just pure unadulterated obsession on my part)
+- Redid the "view slime" page to account for all these new stats. Lots of work to go on this
+
+# boring techncial stuff 
+- Wired up transactional email delivery, allowing for password resets.
+- Also cleaned up the new account and lost password pages while I was there, since they were basically completely unstyled
+- Added a security feature to force-logout all your active sessions in case your account gets stolen
+- Cleaned up and renamed a lot of stuff internally (a lot of old references to other pets from when I wasn't sure what kind of pet site I wanted to make)
+- Made hubs for the laboratory page and contests page to prep for future functionality
+- Wired up bug report and feedback links to a survey
+
+# upcoming this week
+I feel REALLY good about this last week, it was extremely productive. There is one major change I want to make to slime racing visually and mechanically before I show previews, and I've got some other little polish to add to it, mostly around colours. After that I have some backend work to do on the slime racing as well to allow for scheduling and persistence: as it is right now it's one real slime versus four slimes from a set roster, but on the real site my intention is for all slimes racing to be from the database if possible.
+
+I think that's going to be most of the week. I might poke away at other cleanup items while I'm at it, like writing more biography details and working a bit on the lab landing pages, but the racing is going to take up 90% of my time for sure. 

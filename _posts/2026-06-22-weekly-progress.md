@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "weekly progress log"
+title: "weekly progress log 1"
 date: 2026-06-22 14:00:00 +0000
 ---
 
