@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "starting the goo grotto dev log"
+title: "weekly progress log 2"
 date: 2026-06-29 16:00:00 +0000
 published: true
 ---
