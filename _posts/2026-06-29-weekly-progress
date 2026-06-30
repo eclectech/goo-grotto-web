@@ -24,14 +24,14 @@ This is the big one! I made a huge amount of progress. It was one of those thing
 
 I did some foundation work on slimes themselves too:
 
-- Gave slimes some stats that are on sliding scales, not just "number go up", to make them differentiate from each other even at max level
-- Gave slimes a personality as well
+- Gave slimes some stats that are on sliding scales, not just "number go up", to make them different from each other even at max level
+- Gave slimes a personality as well using the sliding scales system
 - Extracted existing genetic traits that seemed to fit into this new sliding scale system to keep things nice and consistent
 - Started adding a "biography composer" and "notability" system that should hopefully make any text written about slimes automatically look fun and variable, instead of just being a list of stats. (No LLM usage, just pure unadulterated obsession on my part)
 - Redid the "view slime" page to account for all these new stats. Lots of work to go on this
 
 # boring techncial stuff 
-- Wired up transactional email delivery, allowing for password resets.
+- Wired up transactional email delivery, allowing for password resets
 - Also cleaned up the new account and lost password pages while I was there, since they were basically completely unstyled
 - Added a security feature to force-logout all your active sessions in case your account gets stolen
 - Cleaned up and renamed a lot of stuff internally (a lot of old references to other pets from when I wasn't sure what kind of pet site I wanted to make)
